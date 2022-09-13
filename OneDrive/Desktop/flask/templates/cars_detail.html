@@ -1,0 +1,38 @@
+{% extends 'homepage.html' %}
+
+{% block search %}
+{% endblock %}
+
+{% block main %}
+<div class="container">
+  <div class="row mt-4">
+      <div class="col-md-10"></div>
+      <div class="col-md-2">
+        
+      </div>
+  </div>
+  <div class="row">
+    <table class="table table-hover">
+      <thead>
+        <tr>
+          <th scope="col">Car Name</th>
+          <th scope="col">Brand</th>
+          <th scope="col">Type</th>
+          <th scope="col">Seating Capacity</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for i in cars_list %}
+        <tr>
+          <td>{{i.name}}</td>
+          <td>{% if i.brand %}{{i.brand}}{% else %}Not Specified{% endif %}</td>
+          <td>{% if i.type %}{{i.type}}{% else %}Not Specified{% endif %}</td>
+          <td>{% if i.seating_capacity %}{{i.seating_capacity}}{% else %}Not Specified{% endif %}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+{% endblock %}

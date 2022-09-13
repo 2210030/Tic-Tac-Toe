@@ -1,0 +1,220 @@
+header {
+  background-color: black;
+  text-align: center;
+  position: fixed;
+  z-index: 98;
+  top:1px;
+  width: 100%; }
+  .logo h1 {
+    font-family: 'copperplate' , fantasy;
+    font-size: 30px;
+    line-height: 22px;
+    font-weight: 500;
+    color: violet; }
+  .main-menu {
+    text-align: right; }
+  .menu-items li {
+    display: inline-block;
+    margin-right: 20px;
+    font-family:'poppins' , sans-serif;
+    letter-spacing: 1.5px; }
+    .menu-items a:visited{
+      color:violet;}
+    .menu-items a:visited:hover{
+      color:yellow;}
+ .logo {
+  overflow: hidden; }
+ .hamburguer-icon {
+    display: none; }
+.menu-out {
+  position: fixed;
+  z-index: 99;
+  right: -320px;
+  overflow: hidden;
+  width: 150px;
+  height: 45%; }
+.smenu {
+  background-color:black;
+  position: relative;
+  width: 100%; }
+.smenu-li {
+  margin: 0;}
+.smenu-li li {
+  height: 42px; }
+.smenu-li li a:visited {
+  color: violet; }
+@media only screen and (min-width: 10em) and (max-width: 59.99em) {
+  .main-header {
+    height: 80px; }
+  .menu-items {
+      display: none; }
+ .hamburguer-icon {
+      display: initial; }
+.element {
+    height: 80px; } }
+@media only screen and (min-width: 60em) and (max-width: 90em) {
+  .main-header {
+    height: 90px; }
+.logo h1 {
+    font-size: 22px;
+    line-height: 22px; }
+.element {
+    height: 90px; } }
+.section-title {
+  text-align: center; }
+  .section-title h3 {
+    font-size: 22px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 70px;
+    margin-bottom: 1px;
+    color:violet;
+    text-transform: uppercase; }
+  .section-title hr {
+    text-align: center;
+    margin: auto;
+    width: 40px;
+    border: solid 2px purple; }
+    @media only screen and (min-width: 10em) and (max-width: 59.99em) {
+  .section-title {
+    padding: 60px 0 40px 0; }
+    .section-title h3 {
+      font-size: 22px; }
+.our-aim img {
+    width: 26%;
+    margin-left: 12px;
+    margin-bottom: 8px; }
+  .our-aim .our-aim-text p {
+    font-size: 16px; } }
+@media only screen and (min-width: 60em) and (max-width: 90em) {
+  .section-title {
+    padding: 70px 0 50px 0; }
+    .section-title h3 {
+      font-size: 22px; }
+.our-aim img {
+    width: 20%;
+    margin-left: 12px;
+    margin-bottom: 8px; }
+.our-aim .our-aim-text p {
+    font-size: 18px; } }
+.main-photo {
+  height: 400px;
+  position: relative;
+  width: 100%; }
+.photo-section,.main-section-title {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+ .photo-section {
+    z-index: 1; }
+  .photo-section img {
+     min-width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 1;
+      -webkit-transform: translateX(-50%) translateY(-50%);
+      -moz-transform: translateX(-50%) translateY(-50%);
+      -ms-transform: translateX(-50%) translateY(-50%);
+      -o-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%); }
+  .main-section-title {
+    z-index: 3;
+    height: 100%;
+    text-align: center; }
+  .main-section-title h1 {
+      font-size: 50px;
+      font-family: cursive;
+      font-weight: 500;
+      color: white; }
+  .main-section-title h2 {
+      font-size: 24px;
+      font-family: cursive;
+      font-weight: 300;
+      color: white; }
+.books{
+  text-align: center; }
+  .books .books-title {
+    text-align: left; }
+    .books .books-title h3 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700;
+      font-size: 22px;
+      margin-bottom: 8px;
+      color: #424143;
+      text-transform: uppercase; }
+.books-item-image:hover{
+  transform: scale(1.1);
+  z-index: 2;
+}
+.contact-us {
+  text-align: center;
+  padding: 40px 0; }
+  .contact-us .contact-us-title {
+    text-align: left; }
+    .contact-us .contact-us-title h3 {
+      font-family: 'Raleway', sans-serif;
+      font-weight: 700;
+      font-size: 22px;
+      margin-bottom: 8px;
+      color: #424143;
+      text-transform: uppercase; }
+footer {
+  background-color: #030303;
+  padding-top: 30px;
+  text-align: center;
+  overflow-wrap: break-word; }
+  footer div {
+    text-align: left;
+    padding-right: 8px;
+    margin-bottom: 12px; }
+    footer div p {
+      color:violet;
+      font-weight: normal;
+      font-size: 14px; }
+  footer .footer-section-title {
+    color:violet;
+    font-weight: bold;
+    font-size: 16px; }
+  footer .como-chegar #map {
+    width: 100%;
+    height: 120px;
+    background-color: grey; }
+    footer .como-chegar #map a, footer .como-chegar #map span {
+      display: none; }
+.tab-box {
+  display: inline-block;
+  margin: auto;
+  font-size: 0;
+  background-color: #2A2D34;
+  color: white; }
+   .tab-box .box-tabs {
+      text-align: left;
+      background-color: #646872; }
+      .tab-box .box-tabs .single-tab {
+         cursor: pointer;
+         font-size: 16px;
+         font-weight: 300;
+         font-family: 'Poppins', sans-serif;
+         margin: 0;
+         display: inline-block;
+         padding: 0 40px;
+         height: 70px;
+         line-height: 70px; }
+         .tab-box #box-text {
+           text-align: left;
+           padding: 40px;
+           font-family: Arial, sans-serif;
+           font-weight: normal;
+           font-size: 16px;
+           line-height: 28px; }
+           .tab-box #box-text {
+              text-align: left;
+              padding: 40px;
+              font-family: Arial, sans-serif;
+              font-weight: normal;
+              font-size: 16px;
+              line-height: 28px; } 

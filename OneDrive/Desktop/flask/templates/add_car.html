@@ -1,0 +1,79 @@
+{% extends 'homepage.html' %}
+
+{% block search %}
+{% endblock %}
+
+{% block main %}
+<div class="container">
+  <div class="row mt-4">
+      <form action="" method="post">
+        {{ form.csrf_token }}
+        
+        <div class="form-group">
+          <label for="exampleInputEmail1">Car Name{% if form.errors %}
+{{ form.errors }}
+{% endif %}</label>
+          <input type="text" class="form-control" name="name" id="car_name" aria-describedby="emailHelp" placeholder="Enter Car Name" value={% if form.name.data %}{{form.name.data}}{% else %}{% endif %}>
+          {% if form.name.errors %}
+          <div class="invalid-feedback">
+            {% for error in form.name.errors %}
+              <span>{{error}}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          <div class="form-group">
+          <label for="exampleInputEmail1">Brand Name</label>
+          <input type="text" class="form-control" name="brand" id="brand_name" aria-describedby="emailHelp" placeholder="Enter Brand Name" value={% if form.brand.data %}{{form.brand.data}}{% else %}{% endif %}>
+          {% if form.brand.errors %}
+          <div class="invalid-feedback">
+            {% for error in form.brand.errors %}
+              <span>{{error}}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          <div class="form-group">
+          <label for="exampleInputEmail1">Seating capacity</label>
+          <input type="number" class="form-control" name="seating_capacity" id="seating_capacity" aria-describedby="emailHelp" placeholder="Seating Capacity" value={% if form.seating_capacity.data %}{{form.seating_capacity.data}}{% else %}{% endif %}>
+          {% if form.seating_capacity.errors %}
+          <div class="invalid-feedback">
+            {% for error in form.seating_capacity.errors %}
+              <span>{{error}}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+
+
+        <!-- <div class="form-group">
+            <label for="exampleInputEmail1">Model Released Year</label>
+            <input type="date" class="form-control" name="model_released_year" id="model_released_year" aria-describedby="emailHelp" placeholder="Model Released Year" value={% if form.model_released_year.data %}{{form.model_released_year.data}}{% else %}{% endif %}>
+            {% if form.model_released_year.errors %}
+            <div class="invalid-feedback">
+              {% for error in form.model_released_year.errors %}
+                <span>{{error}}</span>
+              {% endfor %}
+            </div>
+            {% endif %}
+        </div> -->
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">Type</label>
+            <input type="text" class="form-control" name="type" id="type" aria-describedby="emailHelp" placeholder="Type" value={% if form.type.data %}{{form.type.data}}{% else %}{% endif %}>
+            {% if form.type.errors %}
+            <div class="invalid-feedback">
+              {% for error in form.type.errors %}
+                <span>{{error}}</span>
+              {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+
+
+        <button type="submit" class="btn btn-primary mt-4">Submit</button>
+      </form>
+  </div>
+</div>
+
+{% endblock %}

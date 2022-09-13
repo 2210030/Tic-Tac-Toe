@@ -1,0 +1,93 @@
+{% extends 'homepage.html' %}
+
+{% block search %}
+{% endblock %}
+
+{% block main %}
+<div class="container">
+  <div class="row mt-4">
+      <form action="" method="post">
+        {{ form.csrf_token }}
+        
+        <div class="form-group">
+          <label for="exampleInputEmail1">Show Name{% if form.errors %}
+{{ form.errors }}
+{% endif %}</label>
+          <input type="text" class="form-control" name="name" id="movie_name" aria-describedby="emailHelp" placeholder="Enter Show Name" value={% if form.name.data %}{{form.name.data}}{% else %}{% endif %}>
+          {% if form.name.errors %}
+          <div class="invalid-feedback">
+            {% for error in form.name.errors %}
+              <span>{{error}}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          <div class="form-group">
+          <label for="exampleInputEmail1">Director Name</label>
+          <input type="text" class="form-control" name="director" id="director_name" aria-describedby="emailHelp" placeholder="Enter Director Name" value={% if form.director.data %}{{form.director.data}}{% else %}{% endif %}>
+          {% if form.director.errors %}
+          <div class="invalid-feedback">
+            {% for error in form.director.errors %}
+              <span>{{error}}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+
+          <div class="form-group">
+          <label for="exampleInputEmail1">No of episodes</label>
+          <input type="number" class="form-control" name="no_of_episodes" id="no_of_episodes" aria-describedby="emailHelp" placeholder="No of episodes" value={% if form.no_of_episodes.data %}{{form.no_of_episodes.data}}{% else %}{% endif %}>
+          {% if form.no_of_episodes.errors %}
+          <div class="invalid-feedback">
+            {% for error in form.no_of_episodes.errors %}
+              <span>{{error}}</span>
+            {% endfor %}
+          </div>
+          {% endif %}
+        </div>
+
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">Released Year</label>
+            <input type="date" class="form-control" name="released_year" id="released_year" aria-describedby="emailHelp" placeholder="Released Year" value={% if form.released_year.data %}{{form.released_year.data}}{% else %}{% endif %}>
+            {% if form.released_year.errors %}
+            <div class="invalid-feedback">
+              {% for error in form.released_year.errors %}
+                <span>{{error}}</span>
+              {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">End Date</label>
+            <input type="date" class="form-control" name="end_date" id="end_date" aria-describedby="emailHelp" placeholder="End Date" value={% if form.end_date.data %}{{form.end_date.data}}{% else %}{% endif %}>
+            {% if form.end_date.errors %}
+            <div class="invalid-feedback">
+              {% for error in form.end_date.errors %}
+                <span>{{error}}</span>
+              {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+
+
+        <div class="form-group">
+            <label for="exampleInputEmail1">Genre</label>
+            <input type="text" class="form-control" name="genre" id="genre" aria-describedby="emailHelp" placeholder="Genre" value={% if form.genre.data %}{{form.genre.data}}{% else %}{% endif %}>
+            {% if form.genre.errors %}
+            <div class="invalid-feedback">
+              {% for error in form.genre.errors %}
+                <span>{{error}}</span>
+              {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+
+
+        <button type="submit" class="btn btn-primary mt-4">Submit</button>
+      </form>
+  </div>
+</div>
+
+{% endblock %}
